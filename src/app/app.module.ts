@@ -14,6 +14,10 @@ import { TableComponent } from "./components/table/table.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { ModalComponent } from "./components/modal/modal.component";
 import { TestComponent } from "./test.component";
+import { RadioComponent } from "./components/radio/radio.component";
+import { ListComponent } from "./components/list/list.component";
+import { CandiesService } from "./services/products/candies.service";
+import { PastryService } from "./services/products/pastry.service";
 
 @NgModule({
   declarations: [
@@ -28,13 +32,15 @@ import { TestComponent } from "./test.component";
     NavbarComponent,
     ModalComponent,
     TestComponent,
+    RadioComponent,
+    ListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AuthModule,
   ],
-  providers: [],
+  providers: [CandiesService, PastryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

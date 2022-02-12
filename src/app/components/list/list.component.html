@@ -1,0 +1,12 @@
+<ul class="list-group">
+  <li
+    *ngFor="let product of products; index as i; trackBy: trackByFn"
+    class="list-group-item list-group-item d-flex justify-content-between align-items-start"
+    [ngClass]="{'list-group-item-primary': (i + 1) % 2 === 1, 'list-group-item-danger': (i + 1) % 2 === 0}"
+  >
+    <div>
+      {{i + 1}}. {{product.name}}
+    </div>
+    <span *ngIf="product.allergens" class="badge bg-primary rounded-pill">{{product.allergens}}</span>
+  </li>
+</ul>
