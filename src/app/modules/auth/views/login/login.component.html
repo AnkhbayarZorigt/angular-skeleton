@@ -1,0 +1,48 @@
+<h1>Login page</h1>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+    <div>
+      <app-input
+        id="email"
+        type="email"
+        label="Email:"
+        placeholder="Type your email"
+        [formControl]="email"
+      ></app-input>
+  <!--    <label for="email">Email:</label>-->
+  <!--    <input id="email" type="email" formControlName="email">-->
+
+      <div *ngIf="(email && email.hasError('required')) && (email.touched || email.dirty)" class="form-error">
+        <div>This field is required</div>
+      </div>
+    </div>
+
+    <br>
+
+    <div>
+      <app-input
+        id="password"
+        type="password"
+        label="Password:"
+        placeholder="Type your password"
+        [formControl]="password"
+      ></app-input>
+  <!--    <label for="password">Password:</label>-->
+  <!--    <input id="password" type="password" formControlName="password">-->
+
+      <div *ngIf="(password && password.hasError('required')) && (password.touched || password.dirty)" class="form-error">
+        <div>This field is required</div>
+      </div>
+    </div>
+
+    <br>
+
+    <app-button
+      [disabled]="loginForm.invalid"
+      [fullWidth]="true"
+      type="submit"
+      label="Submit"
+    ></app-button>
+
+    <a routerLink="/register">Don't you have an account?</a>
+  </form>
