@@ -1,8 +1,50 @@
-<app-list [products]="(candies | async) || []"></app-list>
+<!--<h1>Formular</h1>-->
 
-<br>
+<!--<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">-->
+<!--  <div>-->
+<!--    <app-input-->
+<!--      id="email"-->
+<!--      type="email"-->
+<!--      label="Email:"-->
+<!--      placeholder="Type your email"-->
+<!--      [formControl]="email"-->
+<!--    ></app-input>-->
+<!--&lt;!&ndash;    <label for="email">Email:</label>&ndash;&gt;-->
+<!--&lt;!&ndash;    <input id="email" type="email" formControlName="email">&ndash;&gt;-->
 
-<app-list [products]="(pastries | async) || []"></app-list>
+<!--    <div *ngIf="(email && email.hasError('required')) && (email.touched || email.dirty)" class="form-error">-->
+<!--      <div>This field is required</div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <br>-->
+
+<!--  <div>-->
+<!--    <app-input-->
+<!--      id="password"-->
+<!--      type="password"-->
+<!--      label="Password:"-->
+<!--      placeholder="Type your password"-->
+<!--      [formControl]="password"-->
+<!--    ></app-input>-->
+<!--&lt;!&ndash;    <label for="password">Password:</label>&ndash;&gt;-->
+<!--&lt;!&ndash;    <input id="password" type="password" formControlName="password">&ndash;&gt;-->
+
+<!--    <div *ngIf="(password && password.hasError('required')) && (password.touched || password.dirty)" class="form-error">-->
+<!--      <div>This field is required</div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <br>-->
+
+<!--  <button type="submit" [disabled]="loginForm.invalid">Submit</button>-->
+<!--</form>-->
+
+<!--<app-list [products]="(candies | async) || []"></app-list>-->
+
+<!--<br>-->
+
+<!--<app-list [products]="(pastries | async) || []"></app-list>-->
 
 <!--<app-layout>-->
 <!--  <h1>Login page</h1>-->
@@ -25,5 +67,8 @@
 <!--  </form>-->
 <!--</app-layout>-->
 
-
-<router-outlet></router-outlet>
+<div class="container">
+<!--  <div>{{notificationMessage | async}}</div>-->
+  <div>{{notificationMessage}}</div>
+  <router-outlet></router-outlet>
+</div>

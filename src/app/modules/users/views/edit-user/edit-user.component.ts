@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-input',
-  templateUrl: 'input.component.html',
+  selector: 'app-edit-user',
+  templateUrl: 'edit-user.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class InputComponent {
+export class EditUserComponent {
+
 }
