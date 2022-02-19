@@ -1,3 +1,9 @@
 <h1>Create user</h1>
+<select>
+  <option
+    *ngFor="let company of companies | async"
+    [value]="company.id">{{company.id}}</option>
+</select>
+
 <a routerLink="/users" class="btn btn-primary">User list</a>
 
