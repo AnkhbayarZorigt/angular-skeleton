@@ -8,6 +8,8 @@ import { UserLayoutComponent } from "./components/user-layout/user-layout.compon
 import { AuthGuard } from "../../guards/auth.guard";
 import { CommonModule } from "@angular/common";
 import { UserPipe } from "./pipes/user.pipe";
+import { DeleteUserComponent } from "./views/delete-user/delete-user.component";
+import { HttpClientModule } from "@angular/common/http";
 
 const routes: Route[] = [
   {
@@ -32,13 +34,14 @@ const routes: Route[] = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes), CommonModule],
+  imports: [RouterModule.forChild(routes), CommonModule, HttpClientModule],
   exports: [],
   declarations: [
     CreateUserComponent,
     EditUserComponent,
     ListUserComponent,
     UserLayoutComponent,
+    DeleteUserComponent,
     UserPipe,
   ],
   providers: [],
